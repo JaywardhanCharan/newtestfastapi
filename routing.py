@@ -4954,3 +4954,11 @@ class APIRouter(routing.Router):
             return func
 
         return decorator
+
+# New endpoint added - v2 users
+@router.get("/users/v2", tags=["users"])
+async def get_users_v2():
+    return {"version": "v2", "users": []}
+
+
+
